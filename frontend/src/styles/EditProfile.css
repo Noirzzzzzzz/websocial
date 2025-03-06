@@ -1,0 +1,126 @@
+#EditProfile-page :root {
+    --primary-color: #474747;
+    --secondary-color: #575757;
+    --background-color: #111111;
+    --text-color: white;
+    --danger-color: #FF4D4D;
+    --border-radius: 8px;
+}
+
+#EditProfile-page body {
+    font-family: 'Arial', sans-serif;
+    background-color: #474747;
+    color: white;
+}
+
+#EditProfile-page .edit-profile-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: #474747;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+}
+
+#EditProfile-page h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+#EditProfile-page .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+#EditProfile-page label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#EditProfile-page input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+#EditProfile-page textarea {
+    resize: none;
+}
+
+#EditProfile-page input[type="text"]:focus,
+textarea:focus {
+    border-color: black;
+    outline: none;
+    box-shadow: 0 0 5px white;
+}
+
+#EditProfile-page input[type="file"] {
+    display: none;
+}
+
+#EditProfile-page .file-label {
+    display: inline-block;
+    background: #575757;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 14px;
+    border: 1px solid white;
+}
+#EditProfile-page .file-label:hover {
+    background-color: #777777;
+    color: white;
+}
+
+
+#EditProfile-page .profile-picture-preview {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+#EditProfile-page button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+#EditProfile-page .save-button {
+    font-size: 18px;
+    background: #575757;
+    color: white;
+    border: 1px solid white;
+}
+
+#EditProfile-page .save-button:hover {
+    background: #777777;
+    color: white;
+}
+
+#EditProfile-page .back-button {
+    font-size: 18px;
+    background: #575757;
+    color: white;
+    border: 1px solid white;
+}
+
+#EditProfile-page .back-button:hover {
+    background: #777777;
+    color: white;
+}

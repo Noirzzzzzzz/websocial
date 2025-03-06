@@ -1,0 +1,169 @@
+/* ✅ ตั้งค่าพื้นฐาน */
+#List-page .followlist-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    margin-top: 80px;
+    background: #474747;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Header ที่แสดงข้อมูลผู้ที่ล็อกอิน */
+#List-page .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #474747;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    height: 60px;
+}
+
+/* ✅ กลุ่มเมนูด้านซ้าย */
+#List-page .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ✅ รูปโปรไฟล์ในเมนู */
+#List-page .profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 8px;
+}
+
+/* ✅ ชื่อผู้ใช้ */
+#List-page .user-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF !important; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); 
+}
+
+/* ✅ ปุ่มเมนู */
+#List-page .nav-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px 12px;
+    text-decoration: none;
+    transition: background 0.3s;
+    border-radius: var(--border-radius);
+}
+
+#List-page .nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ✅ ปุ่ม Logout อยู่ด้านขวาสุด */
+#List-page .logout-button {
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#List-page .logout-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ✅ ปุ่มย้อนกลับ */
+#List-page .back-to-profile {
+    margin-bottom: 10px;
+}
+
+#List-page .back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#List-page .back-button:hover {
+    text-decoration: underline;;
+}
+
+/* ✅ รายชื่อ Followers และ Following */
+h2 {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+/* ✅ กรอบลิสต์ของ Followers และ Following */
+#List-page .follow-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* ✅ การ์ดแต่ละคน */
+#List-page .user-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #575757;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+#List-page .user-card:hover {
+    transform: scale(1.02);
+}
+#List-page .user-name-card{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+#List-page .user-name-card:hover{
+    text-decoration: underline;
+}
+
+/* ✅ รูปโปรไฟล์ของแต่ละคน */
+.profile-picture-small {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* ✅ ปุ่ม Follow และ Unfollow */
+#List-page .follow-button {
+    margin-left: auto;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background: #575757;
+    color: white;
+    cursor: pointer;
+}
+
+#List-page .follow-button:hover {
+    background: #777777;
+}
+
+/* ✅ ข้อความสำหรับตัวเอง */
+#List-page .self-text {
+    color: white;
+    font-size: 16px;
+}

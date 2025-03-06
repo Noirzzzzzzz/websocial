@@ -1,0 +1,531 @@
+#Home-page :root {
+    --primary-color: #474747;
+    --secondary-color: #575757;
+    --background-color: #111111;
+    --text-color: white;
+    --danger-color: #FF4D4D;
+    --border-radius: 8px;
+}
+#Home-page body, html {
+    background-color: #111111 !important;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: auto;
+    overflow-y: auto; 
+}
+
+/* ✅ Header (แถบเมนูด้านบน) */
+#Home-page .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #474747;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    height: 60px;
+}
+
+/* ✅ กลุ่มเมนูด้านซ้าย */
+#Home-page .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ✅ รูปโปรไฟล์ในเมนู */
+#Home-page .profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* ✅ ชื่อผู้ใช้ */
+#Home-page .user-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF !important; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); 
+}
+
+/* ✅ ปุ่มเมนู */
+#Home-page .nav-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px 12px;
+    text-decoration: none;
+    transition: background 0.3s;
+    border-radius: var(--border-radius);
+}
+
+#Home-page .nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ✅ ปุ่ม Logout อยู่ด้านขวาสุด */
+#Home-page .logout-button {
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#Home-page .logout-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ✅ เนื้อหาโพสต์ */
+#Home-page .content {
+    width: 100%;
+    max-width: 900px; 
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #111111;
+}
+
+/* ✅ กล่องโพสต์ใหม่ */
+#Home-page .new-post {
+    background: #474747 !important;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 800px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#Home-page .post-user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#Home-page .post-profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#Home-page .post-user-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF !important;
+}
+
+
+#Home-page .post {
+    width: 800px; 
+    max-width: 100%; 
+    background-color: #474747;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* ✅ จัดกึ่งกลาง */
+    display: block; /* ✅ ป้องกันโพสต์ถูกบีบ */
+}
+#Home-page .post-input {
+    width: 100%;
+    min-height: 80px;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 14px;
+    resize: vertical;
+    background-color: #575757;
+    color: white;
+}
+.file-upload-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.file-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #474747;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+}
+.file-label:hover {
+    background: #575757;
+}
+.file-icon {
+    font-size: 18px;
+}
+.file-preview-icon {
+    font-size: 16px;
+    color: #ffffff;
+}
+.file-input {
+    display: block;
+    margin: 10px auto;
+}
+.file-input-hidden {
+    display: none;
+}
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #777777;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+.file-name {
+    font-size: 14px;
+    color: #ffffff !important;
+}
+
+#Home-page .post-button {
+    display: center;
+    align-items: center;
+    gap: 8px;
+    background: #575757;
+    color: white;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+#Home-page .post-icon {
+    font-size: 18px;
+}
+
+#Home-page .post-button:hover {
+    background-color: #777777;
+}
+
+/* ✅ กล่องโพสต์ */
+#Home-page .post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 800px;
+    max-width: 100%;
+}
+#Home-page .post-content {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+
+/* ✅ วันเวลาของโพสต์ */
+#Home-page .post-date {
+    font-size: 12px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* ✅ รูปในโพสต์ (ป้องกันขยายเต็มจอ) */
+#Home-page .post-image {
+    width: 100%; /* ✅ ให้รูปขยายเต็มโพสต์ */
+    max-width: 800px; /* ✅ ป้องกันการขยายเกินโพสต์ */
+    height: auto; /* ✅ ปรับอัตราส่วนอัตโนมัติ */
+    max-height: 500px; /* ✅ กำหนดความสูงสูงสุด */
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+    object-fit: contain; /* ✅ ขยายรูปให้พอดี แต่ไม่บิดเบี้ยว */
+}
+
+/* ✅ ปุ่มในโพสต์ */
+#Home-page .post-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* จัดให้ปุ่มลบไปชิดขวา */
+    gap: 15px;
+    margin-top: 10px;
+    width: 100%;
+}
+#Home-page .post-actions-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#Home-page .post-actions-right {
+    margin-left: auto;
+}
+
+#Home-page .post-author-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ✅ ปุ่ม Action (Like, Share, Delete) */
+#Home-page .action-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #474747;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+#Home-page .action-button .icon {
+    font-size: 16px;
+}
+
+#Home-page .like-button {
+    color: white;
+}
+#Home-page .like-button:hover {
+    background-color: #575757;
+    color: white;
+}
+
+#Home-page .like-button.liked {
+    background-color: #474747; /* สีฟ้าเมื่อกด Like */
+    color: #1877f2;
+}
+#Home-page .like-button.liked:hover {
+    background-color: #575757; /* สีฟ้าเมื่อกด Like */
+    color: #1877f2;
+}
+
+/* ✅ ปรับปุ่ม Share */
+#Home-page .share-button {
+    color: #ffffff;
+}
+#Home-page .share-button:hover {
+    background-color: #575757;
+    color: #ffffff;
+}
+
+/* ✅ ปรับปุ่ม Delete */
+#Home-page .delete-button {
+    color: white;
+    
+}
+
+#Home-page .delete-button:hover {
+    background-color: #d32f2f;
+}
+
+
+/* ✅ กล่องโพสต์ที่แชร์ */
+#Home-page .shared-from-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* ✅ รูปโปรไฟล์ในโพสต์ที่แชร์ */
+#Home-page .shared-from-profile-picture {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+#Home-page .profile-link{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+#Home-page .profile-link:hover{
+    text-decoration: underline;
+}
+
+/* ✅ ชื่อคนที่แชร์ */
+#Home-page .shared-from-name {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#Home-page .shared-from-name:hover {
+    text-decoration: underline;
+}
+
+/* ✅ ป้าย Shared from */
+#Home-page .shared-by {
+    font-size: 12px;
+    color: #777;
+}
+
+/* ✅ สไตล์ขีดคั่นหลังชื่อ */
+#Home-page .divider {
+    margin: 0 1px; 
+    font-size: 18px;
+    color: #ffffff !important; 
+    vertical-align: middle;
+}
+
+#Home-page .comment-button {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#Home-page .comment-button .icon {
+    font-size: 18px;
+}
+
+#Home-page .comment-button:hover {
+    background-color: #575757;
+    color: white;
+}
+
+#Home-page .comment-section {
+    margin-top: 10px; 
+    padding: 10px;
+    background-color: #474747;
+    border-radius: 8px;
+    width: 100%; 
+}
+
+#Home-page .comment-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+#Home-page .comment-profile-picture {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+#Home-page .comment-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: #575757;
+    color: white;
+}
+#Home-page .comment-submit-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #474747;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+#Home-page .comment-submit-button:hover {
+    background-color: #575757;
+    color: white;
+}
+
+#Home-page .comment-list {
+    margin-top: 10px;
+    color: white;
+}
+
+#Home-page .comment {
+    align-self: flex-start;
+    align-items: center;
+    justify-content: space-between;  /* ✅ ให้ปุ่มลบไปชิดขวา */
+    display: flex;
+    align-items: center;
+    background-color: #575757;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 5px;
+    max-width: 100%;
+}
+
+#Home-page .comment-delete-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: auto;  /* ✅ บังคับให้ปุ่มไปอยู่ขอบขวา */
+    padding: 5px;
+}
+#Home-page .comment-delete-button:hover {
+    color: #d32f2f;
+}
+
+#Home-page .comment-author-picture {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    align-self: flex-start;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+#Home-page .comment-content {
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: pre-wrap;  
+    max-width: 85%; 
+    margin-left: 10px;
+    color: #ffffff;
+}
+
+
+#Home-page .comment-author {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    color: #ffffff;
+}
+
+#Home-page .comment-date {
+    font-size: 12px;
+    color: gray;
+    display: block;
+}
+#Home-page .comment-wrapper {
+    width: 100%;
+    margin-top: 10px;
+    display: block;
+}
+#Home-page .comment-actions-left {
+    display: flex;
+    align-items: center;
+}

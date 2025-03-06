@@ -1,0 +1,193 @@
+#Contact-page :root {
+    --primary-color: #474747;
+    --secondary-color: #575757;
+    --background-color: #111111;
+    --text-color: white;
+    --danger-color: #FF4D4D;
+    --border-radius: 8px;
+}
+#Contact-page body, html {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: auto;
+    overflow-y: auto; 
+}
+
+/* ✅ Header (แถบเมนูด้านบน) */
+#Contact-page .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #474747;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    height: 60px;
+}
+
+/* ✅ กลุ่มเมนูด้านซ้าย */
+#Contact-page .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ✅ รูปโปรไฟล์ในเมนู */
+#Contact-page .profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 8px;
+}
+
+/* ✅ ชื่อผู้ใช้ */
+#Contact-page .user-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF !important; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); 
+}
+
+/* ✅ ปุ่มเมนู */
+#Contact-page .nav-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px 12px;
+    text-decoration: none;
+    transition: background 0.3s;
+    border-radius: var(--border-radius);
+}
+
+#Contact-page .nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ✅ ปุ่ม Logout อยู่ด้านขวาสุด */
+#Contact-page .logout-button {
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#Contact-page .logout-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#Contact-page .contact-container {
+    max-width: 800px;
+    margin: 80px auto 20px auto; /* ให้เว้นระยะจาก header */
+    background: #474747;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+#Contact-page h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* ✅ รายชื่อผู้ใช้ทั้งหมด */
+#Contact-page .user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #474747;
+    color: white;
+}
+
+
+/* ✅ การ์ดแต่ละคน */
+#Contact-page .user-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    background-color: #575757;
+}
+
+
+
+/* ✅ รูปโปรไฟล์ */
+#Contact-page .profile-picture-small {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+/* ✅ ลิงก์ไปยังโปรไฟล์ */
+#Contact-page .user-list-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin-right: auto; /* ทำให้ชื่อไปอยู่ทางซ้ายสุด */
+}
+
+#Contact-page .user-list-name:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* ✅ ปุ่ม Follow และ Delete */
+#Contact-page .follow-button, .delete-button {
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 30px
+}
+
+#Contact-page .follow-button {
+    background-color: #575757;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+
+#Contact-page .delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    margin-left: 10px;
+
+}
+
+#Contact-page .follow-button:hover {
+    background-color: #777777;
+}
+
+#Contact-page .delete-button:hover {
+    background-color: darkred;
+}

@@ -1,0 +1,101 @@
+:root {
+    --primary-color: #474747; /* ✅ สีหลัก (น้ำเงินอ่อน) */
+    --secondary-color: #575757; /* ✅ สีเทาอ่อน */
+    --background-color: #111111; /* ✅ พื้นหลังสีขาว */
+    --text-color: white; /* ✅ ข้อความสีดำ */
+}
+
+body {
+    background-color: #111111 !important;
+    color: var(--text-color) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+}
+
+/* ✅ กล่อง Login เหมือน Register */
+.login-container {
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    background-color: #474747;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px black;
+    width: 400px; /* ✅ เปลี่ยนจาก `max-width: 400px` เป็น `width: 400px` เพื่อไม่ให้บีบ */
+    text-align: center;
+}
+
+/* ✅ หัวข้อ */
+h2 {
+    color: white;
+}
+
+/* ✅ ปรับสี Label */
+.form-label {
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* ✅ ช่องกรอกข้อมูลเหมือน Register */
+.form-control {
+    background-color: #474747;
+    border: 2px solid black;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.form-control:focus {
+    background-color: red;
+    border-color: black;
+    color: white;
+    outline: none;
+}
+
+/* ✅ ปรับปุ่ม Login */
+.btn-primary {
+    background-color: #575757 !important;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 6px;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #777777;
+    color: white; /* ✅ น้ำเงินเข้มขึ้นเมื่อ hover */
+}
+
+/* ✅ ข้อความแจ้งเตือน */
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+}
+
+/* ✅ ลิงก์ไป Register */
+.register-link {
+    display: block;
+    margin-top: 10px;
+    color: #4A90E2;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
